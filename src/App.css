@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+body {
+    background-color: antiquewhite;
+    color: dimgrey;
+}
+.county-list {
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+}
+.county-list-header {
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+    height: 60px;
+}
+.county-list-global-axis {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    bottom: 0;
+    left: 180px;
+}
+.county-list-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    bottom: 0;
+    overflow-y: scroll;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.country-list-row {
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+    height: 50px;
+    cursor: pointer;
+}
+.country-list-row-selected {
+    background-color: rgba(200, 200, 200, 0.2);
+}
+.country-cell {
+    width: 152px;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 28px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.country-cell-population {
+    font-size: 10px;
+    font-family: Courier;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.inline-chat-header {
+    width: 180px;
+    padding: 4px;
+    font-size: 12px;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.inline-chat-header-title {
+    font-size: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inline-chat-header-details {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
 }

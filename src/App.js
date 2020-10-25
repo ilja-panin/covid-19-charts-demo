@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React, {useState} from "react";
+
 import './App.css';
+import countryData from "./data/filtered-country-data.json"
+import CountryList from "./components/CountryList";
+import {addMaxMetadataToCountries, getMaxValues} from "./components/chartsUtil";
+
+const sorted = countryData
+    .filter( c => c.Country !== "United Kingdom" && c.Country !== "Monaco" )
+    .sort(( b, a) =>{
+        if (a.Country > b.Country) {
+            return -1;
+        }
+        if (b.Country > a.Country) {
+            return 1;
+        }
+        return 0;
+})
+
+const preparedCountryData = addMaxMetadataToCountries(sorted);
+const chartMaxMetadata = getMaxValues(preparedCountryData);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [selectedCountry, setSelectedCountry] = useState(null);
+    return (
+        <div className="App">
+            <CountryList
+                countries={preparedCountryData}
+                maxValues={chartMaxMetadata}
+                setSelectedCountry={setSelectedCountry}
+                selectedCountry={selectedCountry}
+            />
+        </div>
+    );
 }
 
 export default App;
