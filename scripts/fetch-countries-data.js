@@ -46,6 +46,10 @@ countryCodes.forEach( countryObject => {
 
 const foundCountries = countryCodes.filter(country => !!country.GDP);
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 const fetchedMap = countryData
     .filter(country => Array.isArray(country.covidData))
     .reduce( (acc, item) => { acc[item.Slug] = item.covidData; return acc }, {} );
@@ -61,6 +65,7 @@ async function fetchCountriesData(countries) {
             console.log(`fetching ${country.Slug}` );
             const countryDataCV19 = await fetch(`https://api.covid19api.com/country/${country.Slug}`, requestOptions)
             country.covidData = await countryDataCV19.json();
+            await sleep(15000);
         } catch (e) {
             console.log( `fetch error for ${country.Country}` )
         }

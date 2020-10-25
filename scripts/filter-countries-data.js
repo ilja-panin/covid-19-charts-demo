@@ -80,7 +80,7 @@ countryWithPopulation = countryWithPopulation
     .filter(country => !!country.population)
     .filter(country => Array.isArray(country.covidData)); //filter countries with fetch error :(
 
-let filteredData = _.take(countryWithPopulation, 200).map(clearCountryData)
+let filteredData = countryWithPopulation.map(clearCountryData)
 
 filteredData = filteredData.filter( data => data.covidData.length > 0 );
 
