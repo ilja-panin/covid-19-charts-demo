@@ -13,6 +13,9 @@ body {
     min-height: 100%;
 }
 
+.data-point {
+    cursor: pointer;
+}
 .root {
     position: absolute;
     top: 0;

@@ -1,6 +1,6 @@
 {
   "name": "covid-19-demo",
-  "homepage": "https://ilja-panin.github.io/ilja-panin/covid-19-charts-demo/",
+  "homepage": "https://ilja-panin.github.io/covid-19-charts-demo/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

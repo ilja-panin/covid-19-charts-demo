@@ -9,11 +9,11 @@ const CHART_WIDTH = BUBBLE_CHART_WIDTH - 130;
 const CHART_HEIGHT = BUBBLE_CHART_HEIGHT - 60;
 
 function CountryPoint({x, y, onClick, id}) {
-  return <circle cx={x} cy={y} r="3" fill="#a65628" fillOpacity={0.3} onClick={onClick} id={id}/>
+  return <circle className="data-point" cx={x} cy={y} r="3" fill="#a65628" fillOpacity={0.3} onClick={onClick} id={id}/>
 }
 
 function SelectedCountryPoint({x, y, onClick, id}) {
-  return <circle cx={x} cy={y} r="4" fill="#0ff" fillOpacity={0.8} onClick={onClick} id={id}/>
+  return <circle className="data-point" cx={x} cy={y} r="4" fill="#0ff" fillOpacity={0.8} onClick={onClick} id={id}/>
 }
 
 function CountryOutRangePoint({x, y, direction = '', ...props}) {
@@ -22,7 +22,7 @@ function CountryOutRangePoint({x, y, direction = '', ...props}) {
  const dx = direction.indexOf('E') > -1 ? 8 : 0;
  const dy = direction.indexOf('S') > -1 ? 8 : 0;
 
- return (<g transform={`translate(${x+dx},${y-dy})`} {...props}>
+ return (<g transform={`translate(${x+dx},${y-dy})`} {...props} className="data-point">
     <path transform={`rotate(${angle})`} d="M 0,-3 4,8 0,6 -4,8 z"  fill="#ff0000" fillOpacity={0.6}/>
  </g>)
 }
@@ -33,7 +33,7 @@ function SelectedCountryOutRangePoint({x, y, direction='', ...props}) {
   const dx = direction.indexOf('E') > -1 ? 8 : 0;
   const dy = direction.indexOf('S') > -1 ? 8 : 0;
 
-  return (<g transform={`translate(${x+dx},${y-dy})`} {...props}>
+  return (<g transform={`translate(${x+dx},${y-dy})`} {...props} className="data-point">
     <path transform={`rotate(${angle})`} d="M 0,-4 4.5,9 0,7 -4.5,9 z"  fill="#0ff" fillOpacity={0.8}/>
   </g>)
 }
