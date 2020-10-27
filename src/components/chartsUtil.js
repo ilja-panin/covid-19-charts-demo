@@ -1,7 +1,7 @@
 const reduceCountryMaxMeasures  = (acc, dataPoint ) => {
     acc.maxNDeltaConfirmed = Math.max(acc.maxNDeltaConfirmed, dataPoint.nDeltaConfirmed);
     acc.maxNDeltaDeaths = Math.max(acc.maxNDeltaDeaths, dataPoint.nDeltaDeaths);
-    acc.maxDeath2ConfPercent = 25 // Math.max(acc.maxDeath2ConfPercent, dataPoint.death2ConfPercent);
+    acc.maxDeath2ConfPercent = 15 // Math.max(acc.maxDeath2ConfPercent, dataPoint.death2ConfPercent);
     return acc;
 }
 

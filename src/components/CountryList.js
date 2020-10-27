@@ -36,20 +36,20 @@ function CountryListHeader({maxValues}) {
             Weekly confirmed cases
             <div className='inline-chat-header-details'>
                 per 100k population
-                <br/>(maximum {formatValue(maxValues.maxNDeltaConfirmed)})
+                <br/>( maximum {formatValue(maxValues.maxNDeltaConfirmed)} )
             </div>
         </div>
         <div className='inline-chat-header'>
             Weekly confirmed deaths
             <div className='inline-chat-header-details'>
                 per 100k population
-                <br/>(maximum {formatValue(maxValues.maxNDeltaDeaths)})
+                <br/>( maximum {formatValue(maxValues.maxNDeltaDeaths)} )
             </div>
         </div>
         <div className='inline-chat-header'>
             % of lethal cases, weekly
             <div className='inline-chat-header-details'>
-                (maximum value shown {maxValues.maxDeath2ConfPercent}%)
+                ( maximum value shown {maxValues.maxDeath2ConfPercent}% )
             </div>
         </div>
     </div>);

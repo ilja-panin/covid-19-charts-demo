@@ -20,7 +20,6 @@ function InlineLinearChart({currentCountry, country, maxValue, measure}) {
     //yScale.domain(d3.extent(data, d  => d[measure]));
 
     const line = d3.line()
-        // .curve(d3.curveNatural)
         .x(function (d) {
             return xScale(new Date(d.Date));
         })
@@ -28,7 +27,7 @@ function InlineLinearChart({currentCountry, country, maxValue, measure}) {
             return yScale(d[measure]);
         });
 
-    const [min, max] = d3.extent(data, d => d[measure]);
+    const [, max] = d3.extent(data, d => d[measure]);
     const current = data[data.length - 1][measure];
     const currentY = yScale(current);
     const maxPoint = data.find(d => d[measure] === max);

@@ -43,7 +43,7 @@ const calculateVelocities = (covidData) => {
         const item =  covidData[i];
         item.deltaConfirmed = item.Confirmed - prev.Confirmed;
         item.deltaDeaths = item.Deaths - prev.Deaths;
-        item.death2ConfPercent = item.deltaDeaths / item.deltaConfirmed * 100 || 0;
+        item.death2ConfPercent = item.Deaths / item.Confirmed * 100 || 0;
     }
     covidData.shift();
     return covidData;
