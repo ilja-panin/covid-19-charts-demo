@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ilja-panin/covid-19-charts-demo/static/css/main.de38f0e9.chunk.css",
+    "main.js": "/ilja-panin/covid-19-charts-demo/static/js/main.8e3aba6a.chunk.js",
+    "main.js.map": "/ilja-panin/covid-19-charts-demo/static/js/main.8e3aba6a.chunk.js.map",
+    "runtime-main.js": "/ilja-panin/covid-19-charts-demo/static/js/runtime-main.dd91eceb.js",
+    "runtime-main.js.map": "/ilja-panin/covid-19-charts-demo/static/js/runtime-main.dd91eceb.js.map",
+    "static/js/2.1fc34340.chunk.js": "/ilja-panin/covid-19-charts-demo/static/js/2.1fc34340.chunk.js",
+    "static/js/2.1fc34340.chunk.js.map": "/ilja-panin/covid-19-charts-demo/static/js/2.1fc34340.chunk.js.map",
+    "static/js/3.d214fa5e.chunk.js": "/ilja-panin/covid-19-charts-demo/static/js/3.d214fa5e.chunk.js",
+    "static/js/3.d214fa5e.chunk.js.map": "/ilja-panin/covid-19-charts-demo/static/js/3.d214fa5e.chunk.js.map",
+    "index.html": "/ilja-panin/covid-19-charts-demo/index.html",
+    "static/css/main.de38f0e9.chunk.css.map": "/ilja-panin/covid-19-charts-demo/static/css/main.de38f0e9.chunk.css.map",
+    "static/js/2.1fc34340.chunk.js.LICENSE.txt": "/ilja-panin/covid-19-charts-demo/static/js/2.1fc34340.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dd91eceb.js",
+    "static/js/2.1fc34340.chunk.js",
+    "static/css/main.de38f0e9.chunk.css",
+    "static/js/main.8e3aba6a.chunk.js"
+  ]
+}
